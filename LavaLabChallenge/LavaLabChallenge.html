@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hive</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <style>
+        body {
+            background-image: 
+                 radial-gradient(circle at center, transparent 60%, #f1d9f1 60%),
+                 radial-gradient(circle at center, transparent 50%, #f3def3 50%),
+                 radial-gradient(circle at center, transparent 40%, #f5e2f5 40%),
+                 radial-gradient(circle at center, transparent 30%, #faf1fa 30%),
+                 radial-gradient(circle at center, transparent 20%, #ffffff 20%),
+                 radial-gradient(circle at center, transparent 70%, #f0d4f0 70%);
+
+             background-color: #ffffff; 
+        }
+
+        .profile-image {
+            width: 40px;  
+            height: 40px; 
+            border-radius: 50%; 
+            object-fit: cover; 
+            margin-right: 20px;
+            margin-top: 10px;
+        }
+
+        .heading {
+            margin-left: 25px;
+            font-size: 40px; 
+        }
+
+        .top-bar {
+             background-color: #faf1fa; 
+             padding: 10px 20px; 
+             display: flex; 
+             justify-content: space-between; 
+             align-items: center;
+             object-fit: cover; 
+        }
+
+        .back {
+            margin-left: 40px;
+            width: 89px;
+        }
+
+        .finish {
+            margin-left: 15px;
+            width: 89px;
+        }
+
+        .connected {
+            background-color: #28A745 !important;
+            color: #fff !important;
+        }
+        .logo {
+            font-size: 20px; 
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="top-bar">
+            <a href="./index.html" class="logo">hive</a>
+            <img src="./images/Saad.jpeg" alt="Profile" class="profile-image" />
+          </div>
+
+        <h1 class="heading">Connect your favorite tools</h1>
+
+        <div class="container p-4">
+            <div class="d-flex align-items-center justify-content-center flex-column p-4 mb-3">
+                <div class="col-3 col-12 card">
+                    <div class="d-flex mb-3 space-between">
+                        <img src="./images/icons8-figma-48.png" alt="" />
+                        <button class="mybtn">Connect</button>
+                    </div>
+                    <h4 class="mb-3">Figma</h4>
+                    <p>Stay up to date with your team's latest designs.</p>
+                </div>
+
+                <div class="col-3 col-12 card">
+                    <div class="d-flex mb-3 space-between">
+                        <img src="./images/icons8-google-drive-48.png" alt="" />
+                        <button class="mybtn">Connect</button>
+                    </div>
+                    <h4 class="mb-3">Google Drive</h4>
+                    <p>Access all of your documents and information.</p>
+                </div>
+
+                <div class="col-3 col-12 card">
+                    <div class="d-flex mb-3 space-between">
+                        <img src="./images/icons8-slack-48.png" alt="" />
+                        <button class="mybtn">Connect</button>
+                    </div>
+                    <h4 class="mb-3">Slack</h4>
+                    <p>Communicate seamlessly with your teammates.</p>
+                </div>
+
+                <div class="col-3 col-12 card">
+                    <div class="d-flex mb-3 space-between">
+                        <img src="./images/icons8-notion-48.png" alt="" />
+                        <button class="mybtn">Connect</button>
+                    </div>
+                    <h4 class="mb-3">Notion</h4>
+                    <p>
+                        Sync all of your notes, team docs, and other important
+                        information.
+                    </p>
+                </div>
+            </div>
+
+            <div class="d-flex align-items-center justify-content-center flex-column p-4">
+                <div class="col-3 col-12 card">
+                    <div class="d-flex mb-3 space-between">
+                        <img src="./images/icons8-miro-logo-64.png" alt="" />
+                        <button class="mybtn">Connect</button>
+                    </div>
+                    <h4 class="mb-3">Miro</h4>
+                    <p>
+                        Unlock the power of collaboration to distill insights from data.
+                    </p>
+                </div>
+
+                <div class="col-3 col-12 card">
+                    <div class="d-flex mb-3 space-between">
+                        <img src="./images/icons8-airtable-50.png" alt="" />
+                        <button class="mybtn">Connect</button>
+                    </div>
+                    <h4 class="mb-3">Airtable</h4>
+                    <p>Keep your data organized in a spreadsheet-database format.</p>
+                </div>
+
+                <div class="col-3 col-12 card">
+                    <div class="d-flex mb-3 space-between">
+                        <img src="./images/icons8-confluence-48.png" alt="" />
+                        <button class="mybtn">Connect</button>
+                    </div>
+                    <h4 class="mb-3">Confluence</h4>
+                    <p>
+                        Create content, collaborate on work, and organize and share
+                        information
+                    </p>
+                </div>
+
+                <div class="col-3 col-12 card">
+                    <div class="d-flex mb-3 space-between">
+                        <img src="./images/Dovetail.png" alt="" />
+                        <button class="mybtn">Connect</button>
+                    </div>
+                    <h4 class="mb-3">DoveTail</h4>
+                    <p>Organize and tag your research in a collaborative platform.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-3 d-flex col-3 col-12">
+            <button class="back">Back</button>
+            <button class="finish">Finish</button>
+        </div>
+    </div>
+</body>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const buttons = document.querySelectorAll('.mybtn');
+
+        buttons.forEach(button => {
+            button.addEventListener('click', function () {
+                if (button.classList.contains('connected')) {
+                    button.classList.remove('connected');
+                    button.textContent = 'Connect';
+                } else {
+                    button.classList.add('connected');
+                    button.textContent = 'Connected';
+                }
+            });
+        });
+        const backButton = document.querySelector('.back');
+        const finishButton = document.querySelector('.finish');
+
+        backButton.addEventListener('click', function () {
+            alert('Back button clicked!');
+        });
+
+        finishButton.addEventListener('click', function () {
+            alert('Finish button clicked!');
+        });
+    });
+</script>
+
+</html>
